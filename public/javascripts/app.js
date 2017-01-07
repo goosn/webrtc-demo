@@ -1,6 +1,6 @@
 // the socket handles sending messages between peer connections while they are in the 
 // process of connecting
-var socket = new WebSocket('ws://' + window.location.host + window.location.pathname);
+var socket = new WebSocket('wss://' + window.location.host + window.location.pathname);
 
 socket.onmessage = function(message) {
   var msg = JSON.parse(message.data);
